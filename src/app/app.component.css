@@ -1,0 +1,79 @@
+.control-section1 {
+  margin: 20px;
+}
+
+.e-treegrid .e-selectionbackground { 
+  background-color: rgb(241, 147, 163);
+} 
+
+.e-treegrid .e-altrow {
+  background-color: #fafafa;
+}
+
+.e-contextmenu-wrapper ul .e-menu-item .e-menu-icon::before {
+  content: "";
+}
+
+/* span  {
+  display: none !important;
+} */
+
+.e-contextmenu-wrapper {
+  text-align: left;
+}
+
+.toggled {
+  background: red;
+}
+
+
+
+/* Insert Column Dialog */
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+label {
+  margin-bottom: 10px;
+  
+}
+
+.form-control {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  border-radius: 0;
+}
+
+.control_wrapper {
+  max-width: 500px;
+  min-width: 245px;
+  margin: auto;
+}
+
+/* .control-section {
+  width: 700px;
+  height: 700px;
+  position: relative;
+  margin: auto;
+} */
+/* #control_wrapper {
+  max-width: 600px;
+  margin: auto;
+  } */
+
+  /* @media (min-width: 250px) and (max-width: 500px) {
+    #control_wrapper.control_wrapper {
+      padding: 1% 4% 12%;
+    }
+  }
+
+  @media (max-width: 300px) {
+    #control_wrapper.control_wrapper {
+      padding: 1% 4% 15%;
+    }
+  } */

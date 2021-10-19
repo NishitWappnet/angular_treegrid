@@ -1,0 +1,159 @@
+  <div #controlsection1 class="control-section1">
+    <div class="content-wrapper">
+      <ejs-treegrid
+      #treegrid
+      IsResponsive="true"
+      idMapping="TaskID"
+      parentIdMapping="parentID"
+      [dataSource]="data"
+      [editSettings]="editSettings"
+      [selectionSettings]='selectionOptions'
+      [treeColumnIndex]="1"
+      [allowFiltering]="true"
+      [allowResizing]="true"
+      [allowReordering]='true'
+      [allowSorting]="true"
+      [allowMultiSorting]='true'
+      [allowRowDragAndDrop]='true'
+      [sortSettings]="sortSettings"
+      [enableInfiniteScrolling]="true"
+      [pageSettings]="pageSettings"
+      childMapping="subtasks"
+      [contextMenuItems]="contextMenuItems"
+      (contextMenuClick)='contextMenuClick($event)'
+      (contextMenuOpen)="contextMenuOpen($event)"
+      GridPasteOption="PasteData,ExcludeFirstLine"
+      showColumnChooser='true'
+      [toolbar]='toolbar' 
+      (toolbarClick)='clickHandler($event)'
+      [filterSettings]="filterSettings"
+      height='auto' 
+      width='auto'
+      allowTextWrap= true
+      rowHeight='40'
+      enableHover= true    
+    >
+      
+     <e-columns>
+        <e-column
+          field="taskID"
+          columnName="taskID"
+          headerText="ID"
+          [isPrimaryKey]=true
+          textAlign="Left"
+          width="100px"
+          editType='numericedit'
+          [edit]="numericParams"   
+        ></e-column>
+        <e-column
+          field="taskName"
+          columnName="taskName"
+          headerText="Name"
+          textAlign="Left"
+          width="180px"
+          editType='defaultedit'
+        ></e-column>
+        <!-- <e-column
+          field="startDate"
+          headerText="Start Date"
+          textAlign="Left"
+          [format]="formatOptions"
+          editType="datepickeredit"
+          [edit]="editOptions"
+          width="140px"
+          editType='datepickeredit'
+        ></e-column> -->
+        <!-- <e-column
+          field="endDate"
+          headerText="End Date"
+          [format]="formatOptions"
+          editType="datepickeredit"
+          [edit]="editOptions"
+          textAlign="Left"
+          width="140px"
+          editType='datepickeredit'
+        ></e-column> -->
+        <e-column 
+          field="duration"
+          columnName="duration"
+          headerText="Duration"
+          textAlign="Left"
+          width="140px"
+          editType='numericedit'
+          [edit]="numericParams"
+        ></e-column>
+        <e-column
+          field="progress"
+          columnName="progress"
+          headerText="Progress"
+          textAlign="Left"
+          width="140px"
+          editType='numericedit'
+          [edit]="numericParams"
+        ></e-column>
+      </e-columns>
+    </ejs-treegrid>
+    </div> 
+
+    <ejs-dialog #alertDialog [buttons]='alertDlgButtons' [position]='position1' [visible]="hidden" [header]='alertHeader' [target]='targetElement' [animationSettings]='animationSettings' [content]='alertContent' [showCloseIcon]='showCloseIcon'  [width]='alertWidth'>
+    </ejs-dialog>
+
+        <!-- <div class="control_wrapper" id="control_wrapper" style="margin: 25px auto;">
+          <ejs-dialog #insertColDialog [visible]="hidden"
+          header='Insert Column' showCloseIcon='true' [position]='position1'
+          allowDragging='true' [target]='targetElement' width='450px'>
+          <form id="insertColDialog" [formGroup]="form">
+            <div class="form-row">
+              <div class="form-group col">
+                <label>Field</label>
+                <input type="text" class="form-control" formControlName="field"/>
+              </div>
+              <div class="form-group col">
+                <label>Header Text</label>
+                <input type="text" class="form-control" formControlName="headerText"/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <label>Edit Type</label>
+                <input type="text" class="form-control" formControlName="editType"/>
+              </div>
+              <div class="form-group col">
+                <label>Width</label>
+                <input type="number" class="form-control" formControlName="width"/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <label>Text Alignment</label>
+                <select type="text" class="form-control" formControlName="textAlignment">
+                  <option>Left</option>
+                  <option>Center</option>
+                  <option>Right</option>
+                </select>
+              </div>
+              <div class="form-group col">
+              </div>
+            </div>
+            <div class="form-row">        
+                <button class="btn btn-success" id="submit-btn" (click)= "Submit()">Submit</button>
+                <button class="btn btn-danger" (click)= "Cancel()">Cancel</button>       
+            </div>
+          </form>
+          </ejs-dialog>
+        </div> -->
+    
+  </div>
+
+  
+
+        
+    
+
+  
+
+<!-- <div [ngStyle]="{'background-color': bgColor}">Hello</div>
+<button (click)="changeColor()">Copy</button> -->
+
+
+
